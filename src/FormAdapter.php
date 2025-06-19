@@ -27,6 +27,14 @@ class FormAdapter
 
         if (is_array($route) && count($route)) {
             $action = array_shift($route);
+            if( count($route) == 1 && array_key_exists(0, $route) ) {
+                // the second parameter still in 2 dimension
+                try {
+                    $route = array_shift($route);
+                } catch (\Exception $e) {
+                    $route = [];
+                }
+            }
             $form = $form->form($method, route($action, $route));
         } elseif ($route != null && $route != [] && $route != '') {
             $form = $form->form($method, route($route));
