@@ -1,4 +1,4 @@
-# Laravel Collective to Spatie Laravel HTML Adapter
+# Laravel Collective to Spatie Laravel HTML Adapter (Fork of alban/laravel-collective-spatie-html-parser)
 
 This package serves as an adapter to help projects that depend on the obsolete `laravel-collective/html` library. It provides an interface that uses the same syntax as the `Form` class of `laravel-collective/html` to create HTML elements. Under the hood, it utilizes the `spatie/laravel-html` library, which is actively maintained, to generate the HTML elements. This allows projects to update to newer Laravel versions without changing the HTML creation syntax.
 
